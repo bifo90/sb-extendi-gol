@@ -1,6 +1,6 @@
 databases:
   - name: sb_extendi_gol
-    databaseName: sb_extendi_gol
+    databaseName: sb_extendi_gol_production
     user: sb_extendi_gol
     plan: free
 
