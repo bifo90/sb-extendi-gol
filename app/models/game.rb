@@ -13,6 +13,15 @@ class Game < ApplicationRecord
     parsed_matrix.each do |row|
       if row.length != columns or (row.index(".").nil? && row.index("*").nil?)
         errors.add(:matrix, "Invalid Columns")
+        break
+      end
+    end
+    parsed_matrix.each do |row|
+      row.each do |cell|
+        if cell != "*" && cell != "."
+          errors.add(:matrix, "Invalid cell")
+          break
+        end
       end
     end
   end
