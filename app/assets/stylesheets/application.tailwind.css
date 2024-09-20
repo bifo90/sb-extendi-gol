@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .page-margin {
+    @apply pt-16;
+  }
+  .devise_flash {
+    @apply fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 w-full text-center;
+    .notice {
+      @apply bg-green-500 text-green-100 p-4;
+    }
+    .alert {
+      @apply bg-red-500 text-red-100 p-4;
+    }
+    .close {
+      @apply absolute top-1/2 transform -translate-y-1/2 right-0 p-4 z-50;
+    }
+  }
+  .btn-primary {
+    @apply bg-black text-white py-2 px-4 rounded cursor-pointer hover:bg-gray-900;
+  }
+}

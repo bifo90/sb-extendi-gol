@@ -1,0 +1,14 @@
+<div class="bg-white">
+  <div class="min-h-screen relative px-6 pt-16 lg:px-8 flex items-center justify-center">
+    <div class="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
+      <div class="text-center">
+        <h1 class="text-4xl font-bold tracking-tight text-dark sm:text-6xl">Welcome to the Game of Life</h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600">Upload your matrix and see what's going to happen</p>
+        <%= content_tag "div", class: "mt-10 flex items-center justify-center gap-x-6" do %>
+          <%= link_to "Start the game", current_user ? upload_path : new_user_session_path, class: "btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+

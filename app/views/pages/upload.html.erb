@@ -1,0 +1,17 @@
+<div class="page-margin">
+    <div class="max-w-md mx-auto my-20">
+            <h1 class="w-full text-3xl font-bold text-center text-black mb-8">Welcome to the game <%= current_user.email %></h1>
+            <p class="mb-8 text-sm">Here you can play the "Game of Life" by uploading the game matrix in file with .txt extension, ensure that contains this format:</p>
+            <pre class="whitespace-pre-line flex justify-center mb-8">
+                Generation 1:
+                4 8
+                ........
+                ........
+                ...*....
+                ........
+            </pre>
+            <p class="mb-8 text-sm"">Where the first line is the generation number, the second line is the matrix size (X rows, Y columns), and the next lines are the matrix itself, where the dot (.) is a died cell, the * is a live cell</p>
+            <p class="mb-8 text-sm"">If you need a template, here is one: <a href="/entry.txt" download class="underline">download template</a></p> 
+            <%= render '/components/upload_matrix_form' %>
+    </div>
+</div>

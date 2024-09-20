@@ -1,0 +1,11 @@
+<div class="devise_flash" data-controller="devise-flash">
+    <% if notice %>
+      <p class="notice"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert"><%= alert %></p>
+    <% end %>
+    <button class="close" data-action="click->devise-flash#close">
+        <%= render '/components/svg_close', color: 'white' %>
+    </button>
+</div>

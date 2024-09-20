@@ -1,0 +1,10 @@
+<div class="page-margin">
+  <div class="px-8 grid lg:grid-cols-4 gap-16 my-8">
+    <% @games.each do |game| %>
+      <div class="flex flex-col gap-4">
+        <%= render "/components/game_grid", game: game  %>
+        <a href="<%= game_path(game) %>" class="btn-primary">Play</a>
+      </div>
+    <% end %>
+  </div>
+</div>

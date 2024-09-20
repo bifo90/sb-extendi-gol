@@ -1,0 +1,11 @@
+<div class="basis-full" data-controller="drag">
+    <label for="cover-photo" class="block text-sm font-medium leading-6 text-gray-900">Put the Game Matrix Here</label>
+    <%= form_with url: upload_game_path, method: 'post', multipart: true do |f| %>
+        <div class="mt-2 py-4">
+            <%= f.label :file, class: "relative cursor-pointer bg-white font-semibold text-black focus-within:outline-none focus-within:ring-2 focus-within:ring-gray-900 focus-within:ring-offset-2 hover:text-gray-900" do %>
+                <%= f.file_field :file, direct_upload: true, multiple: false, required: true  %>
+            <% end %>
+        </div>
+        <%= f.submit "Upload", class: "btn-primary w-full mt-8" %>
+    <% end %>
+</div>
