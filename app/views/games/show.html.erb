@@ -1,5 +1,5 @@
 <div class="page-margin">
-    <%= link_to "← Back", games_path, class:"mt-8 ml-8 table" %>
+    <%= link_to "← Back", games_path, class:"mt-8 ml-8 table", data: {turbo: false} %>
     <div class="max-w-md mx-auto min-h-screen flex items-center">
         <div class="w-full" data-controller="game" data-game-id-value="<%= params[:id] %>">
             <%= render '/components/game_grid', game: @game %>
