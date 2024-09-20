@@ -1,6 +1,6 @@
 databases:
   - name: mysite
-    databaseName: sbExtendiGolDb
+    databaseName: mysitedb
     user: mysite
     plan: free
 
