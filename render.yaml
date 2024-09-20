@@ -1,12 +1,12 @@
 databases:
-  - name: mysite
-    databaseName: mysitedb
-    user: mysite
+  - name: sb_extendi_gol
+    databaseName: sb_extendi_gol
+    user: sb_extendi_gol
     plan: free
 
 services:
   - type: web
-    name: sbExtendiGoL
+    name: sb_extendi_gol
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
