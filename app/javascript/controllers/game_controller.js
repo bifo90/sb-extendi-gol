@@ -16,6 +16,7 @@ export default class extends Controller {
         }, 1000)
     }
     async play() {
+        console.log('play')
         this.gameAnimation()
     }
 
