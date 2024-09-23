@@ -7,7 +7,7 @@
     @apply pt-16;
   }
   .devise_flash {
-    @apply fixed bottom-0 left-1/2 transform -translate-x-1/2 z-50 w-full text-center;
+    @apply fixed bottom-0 left-0 z-50 w-full text-center;
     .notice {
       @apply bg-green-500 text-green-100 p-4;
     }
@@ -20,5 +20,11 @@
   }
   .btn-primary {
     @apply bg-black text-white py-2 px-4 rounded cursor-pointer hover:bg-gray-900;
+  }
+  #mobile-menu {
+    @apply transform -translate-y-full bg-black opacity-0 pointer-events-none hidden;
+    &.active {
+      @apply transform translate-y-0 opacity-100 pointer-events-auto block;
+    }
   }
 }

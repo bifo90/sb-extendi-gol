@@ -1,10 +1,10 @@
 <div class="page-margin">
-    <%= link_to "← Back", games_path, class:"mt-8 ml-8 table", data: {turbo: false} %>
-    <div class="max-w-md mx-auto min-h-screen flex items-center">
+    <%= link_to "← Back", games_path, class:"mt-4 ml-4 sm:mt-8 sm:ml-8 table animate-fade-in", data: {turbo: false} %>
+        <div class="px-4 sm:px-8 max-w-md mx-auto min-h-screen flex items-center animate-fade-in">
         <div class="w-full" data-controller="game" data-game-id-value="<%= params[:id] %>">
             <%= render '/components/game_grid', game: @game %>
             <div class="flex flex-wrap justify-center items-center mt-8 gap-8">
-                <%= button_to "->", :next_generation, params: {game_id: @game.id},  class: "btn-primary" %>
+                <%= button_to "Next Generation ->", :next_generation, params: {game_id: @game.id},  class: "btn-primary" %>
                 <%= render '/components/play_game_button' %>
             </div>
         </div>

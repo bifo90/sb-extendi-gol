@@ -26,6 +26,7 @@ class Game < ApplicationRecord
     end
   end
 
+
   def parsed_matrix
     JSON.parse(matrix)
   end
